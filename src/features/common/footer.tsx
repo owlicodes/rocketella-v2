@@ -18,7 +18,8 @@ export const Footer = () => {
             />
           </div>
           <div className="mb-4 text-sm text-primary-foreground md:mb-0">
-            © {new Date().getFullYear()} Your Brand Name. All rights reserved.
+            © {new Date().getFullYear()} Rocketella Studios Co. All rights
+            reserved.
           </div>
           <div className="flex space-x-4">
             <Link

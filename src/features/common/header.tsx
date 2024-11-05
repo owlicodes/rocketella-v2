@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { Menu } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,17 +44,42 @@ export const Header = () => {
           />
         </div>
         <div className="flex items-center space-x-4">
-          <nav className="hidden space-x-4 text-white md:flex">
-            <Link href="/">HOME</Link>
-            <Link href="/">ABOUT</Link>
-            <Link href="/">SERVICE</Link>
-            <Link href="/">MENU</Link>
-            <Link href="/">PAGES</Link>
-            <Link href="/">CONTACT</Link>
-          </nav>
-          <Button variant="outline" className="text-primary">
-            GET IN TOUCH
-          </Button>
+          <div className="hidden space-x-4 md:flex md:items-center">
+            <nav className="space-x-4 text-white">
+              <Link href="/">HOME</Link>
+              <Link href="/">ABOUT</Link>
+              <Link href="/">SERVICE</Link>
+              <Link href="/">MENU</Link>
+              <Link href="/">PAGES</Link>
+              <Link href="/">CONTACT</Link>
+            </nav>
+            <Button variant="outline" className="text-primary">
+              GET IN TOUCH
+            </Button>
+          </div>
+
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-4 w-4" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="w-[250px]">
+                <nav className="mb-4 flex flex-col space-y-4">
+                  <Link href="/">HOME</Link>
+                  <Link href="/">ABOUT</Link>
+                  <Link href="/">SERVICE</Link>
+                  <Link href="/">MENU</Link>
+                  <Link href="/">PAGES</Link>
+                  <Link href="/">CONTACT</Link>
+                </nav>
+                <Button variant="outline" className="text-primary">
+                  GET IN TOUCH
+                </Button>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

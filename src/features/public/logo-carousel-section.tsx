@@ -14,9 +14,12 @@ export const LogoCarouselSection = () => {
     <section className="bg-primary py-8">
       <div className="container mx-auto px-4">
         <div className="relative overflow-hidden">
-          <div className="flex animate-marquee items-center justify-center">
+          <div className="flex animate-marquee items-center justify-center whitespace-nowrap">
             {[...logos, ...logos].map((logo, index) => (
-              <div key={index} className="mx-16 w-[100px] flex-shrink-0">
+              <div
+                key={index}
+                className="mx-4 w-[100px] flex-shrink-0 md:mx-12"
+              >
                 {logo.alt === "Netflix" ? (
                   <Image src={logo.src} alt={logo.alt} width={30} height={30} />
                 ) : (

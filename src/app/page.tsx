@@ -1,5 +1,6 @@
 import { Header } from "@/features/common/header";
 import { HeroSection } from "@/features/public/hero-section";
+import { LogoCarouselSection } from "@/features/public/logo-carousel-section";
 import { PassionSection } from "@/features/public/passion-section";
 import { PortfolioSection } from "@/features/public/portfolio-section";
 import { ServicesSection } from "@/features/public/services-section";
@@ -14,6 +15,7 @@ export default function Home() {
       <PortfolioSection />
       <StatsSection />
       <PassionSection />
+      <LogoCarouselSection />
     </div>
   );
 }

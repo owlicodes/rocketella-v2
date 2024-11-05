@@ -24,9 +24,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`w-full transition-all duration-300 ${
+      className={`z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "fixed top-0 bg-black text-white shadow-lg"
+          ? "fixed top-0 bg-primary text-white shadow-lg"
           : "absolute bg-transparent"
       }`}
     >

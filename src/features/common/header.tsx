@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Menu } from "lucide-react";
@@ -10,7 +11,9 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Header = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const invertedHeader = pathname === "/services";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,7 @@ export const Header = () => {
   return (
     <header
       className={`z-50 w-full transition-all duration-300 ${
-        isScrolled
+        isScrolled || invertedHeader
           ? "fixed top-0 bg-primary text-white shadow-lg"
           : "absolute bg-transparent"
       }`}
@@ -48,7 +51,7 @@ export const Header = () => {
             <nav className="space-x-4 text-white">
               <Link href="/">HOME</Link>
               <Link href="/about">ABOUT</Link>
-              <Link href="/">SERVICES</Link>
+              <Link href="/services">SERVICES</Link>
               <Link href="/">MENU</Link>
               <Link href="/">PAGES</Link>
               <Link href="/">CONTACT</Link>
@@ -69,7 +72,7 @@ export const Header = () => {
                 <nav className="mb-4 flex flex-col space-y-4">
                   <Link href="/">HOME</Link>
                   <Link href="/about">ABOUT</Link>
-                  <Link href="/">SERVICES</Link>
+                  <Link href="/services">SERVICES</Link>
                   <Link href="/">MENU</Link>
                   <Link href="/">PAGES</Link>
                   <Link href="/">CONTACT</Link>

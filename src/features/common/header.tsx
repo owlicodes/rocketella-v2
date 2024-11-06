@@ -48,7 +48,7 @@ export const Header = () => {
             <nav className="space-x-4 text-white">
               <Link href="/">HOME</Link>
               <Link href="/about">ABOUT</Link>
-              <Link href="/">SERVICE</Link>
+              <Link href="/">SERVICES</Link>
               <Link href="/">MENU</Link>
               <Link href="/">PAGES</Link>
               <Link href="/">CONTACT</Link>
@@ -69,7 +69,7 @@ export const Header = () => {
                 <nav className="mb-4 flex flex-col space-y-4">
                   <Link href="/">HOME</Link>
                   <Link href="/about">ABOUT</Link>
-                  <Link href="/">SERVICE</Link>
+                  <Link href="/">SERVICES</Link>
                   <Link href="/">MENU</Link>
                   <Link href="/">PAGES</Link>
                   <Link href="/">CONTACT</Link>

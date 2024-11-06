@@ -1,5 +1,3 @@
-import { Footer } from "@/features/common/footer";
-import { Header } from "@/features/common/header";
 import { HeroSection } from "@/features/public/hero-section";
 import { LogoCarouselSection } from "@/features/public/logo-carousel-section";
 import { NewsSection } from "@/features/public/news-section";
@@ -11,7 +9,6 @@ import { WhatWeOfferSection } from "@/features/public/what-we-offer-section";
 export default function Home() {
   return (
     <div className="relative">
-      <Header />
       <HeroSection />
       <WhatWeOfferSection />
       <PortfolioSection />
@@ -19,7 +16,6 @@ export default function Home() {
       <PassionSection />
       <LogoCarouselSection />
       <NewsSection />
-      <Footer />
     </div>
   );
 }

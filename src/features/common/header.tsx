@@ -47,7 +47,7 @@ export const Header = () => {
           <div className="hidden space-x-4 md:flex md:items-center">
             <nav className="space-x-4 text-white">
               <Link href="/">HOME</Link>
-              <Link href="/">ABOUT</Link>
+              <Link href="/about">ABOUT</Link>
               <Link href="/">SERVICE</Link>
               <Link href="/">MENU</Link>
               <Link href="/">PAGES</Link>
@@ -68,7 +68,7 @@ export const Header = () => {
               <SheetContent className="w-[250px]">
                 <nav className="mb-4 flex flex-col space-y-4">
                   <Link href="/">HOME</Link>
-                  <Link href="/">ABOUT</Link>
+                  <Link href="/about">ABOUT</Link>
                   <Link href="/">SERVICE</Link>
                   <Link href="/">MENU</Link>
                   <Link href="/">PAGES</Link>
